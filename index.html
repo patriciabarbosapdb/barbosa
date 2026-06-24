@@ -1,311 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anna S</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Schmidt Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 245, 194, 0.65), transparent 18%),
+        radial-gradient(circle at 85% 85%, rgba(255, 232, 150, 0.6), transparent 16%),
+        linear-gradient(135deg, #d6d1c8 0%, #f2efe9 45%, #d9d3c9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #111;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .card {
+      position: relative;
+      background: #f7f0e7;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .price-badge {
+      position: absolute;
+      top: 18px;
+      right: 14px;
+      background: #fff7a8;
+      color: #1b1b1b;
+      padding: 18px 26px;
+      border-radius: 50% 50% 50% 6px;
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-style: italic;
+      transform: rotate(12deg);
+      z-index: 5;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .brand {
+      position: absolute;
+      top: 22px;
+      left: 18px;
+      z-index: 5;
+      font-family: Georgia, serif;
+      font-size: 34px;
+      letter-spacing: 1px;
+      color: #efe48a;
+      mix-blend-mode: screen;
+    }
+
+    .hero {
+      position: relative;
+      background: #111;
+      color: #fff;
+    }
+
+    .hero-top {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      right: 18px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #f1f1f1;
+      color: #111;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      background: rgba(79, 120, 255, 0.95);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    .hero-image {
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-copy {
+      position: relative;
+      background: #f6efe7;
+      color: #111;
+      padding: 22px 18px 24px;
+    }
+
+    .hero-copy h1 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      line-height: 1;
+      max-width: 240px;
+      margin-bottom: 14px;
+      color: #26211d;
+    }
+
+    .hero-copy p {
+      font-size: 12px;
+      line-height: 1.5;
+      max-width: 240px;
+      margin-bottom: 14px;
+      color: #5a524b;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #f5e97f;
+      color: #111;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .services {
+      background: #f3ece3;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 44px 1fr 28px;
+      align-items: center;
+      gap: 8px;
+      padding: 18px 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: #f7f0e7;
+    }
+
+    .service-row.alt {
+      background: #fbf6ef;
+      font-family: "Times New Roman", serif;
+      font-style: italic;
+    }
+
+    .service-row span:first-child {
+      font-size: 12px;
+      color: #7a726a;
+    }
+
+    .service-row h2 {
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: #171717;
+    }
+
+    .service-row .arrow {
+      text-align: right;
+      font-size: 20px;
+      color: #343434;
+    }
+
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .grid-item {
+      aspect-ratio: 1 / 1.1;
+      overflow: hidden;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        max-width: 100%;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .hero-copy h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main class="page">
+    <section class="card">
+      <div class="price-badge">$225</div>
+      <div class="brand">ANNA SCHMIDT</div>
 
-    <div class="container">
+      <header class="hero">
+        <div class="hero-top">
+          <div class="logo-circle">S</div>
+          <div class="tag">STYLE PORTFOLIO</div>
+        </div>
 
-        <!-- HERO -->
-        <section class="hero">
-            <img src="hero.jpg" alt="Fashion Model">
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80" alt="Fashion model" />
+        </div>
 
-            <h1>ANNA SCHMIDT</h1>
+        <div class="hero-copy">
+          <h1>DISCOVER THE PATH YOU WERE MEANT FOR</h1>
+          <p>Creative direction, website design and brand strategy for modern personal brands.</p>
+          <a href="#" class="btn">Start Here</a>
+        </div>
+      </header>
 
-            <div class="badge">
-                New Collection
-            </div>
+      <section class="services">
+        <article class="service-row">
+          <span>01.</span>
+          <h2>WEBSITE DESIGN</h2>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row alt">
+          <span>02.</span>
+          <h2>Branding Strategy</h2>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row">
+          <span>03.</span>
+          <h2>WEBSITE DESIGN</h2>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row alt">
+          <span>04.</span>
+          <h2>Branding Strategy</h2>
+          <span class="arrow">→</span>
+        </article>
+      </section>
 
-            <div class="hero-text">
-                <p>DISCOVER THE PATH YOU WERE MEANT FOR</p>
-            </div>
-        </section>
-
-        <!-- NAVBAR -->
-        <nav>
-            <ul>
-                <li>ANNA.S</li>
-                <li>SHOP</li>
-                <li>ABOUT</li>
-                <li>WORK</li>
-                <li>TALKS</li>
-                <li>NEWS</li>
-                <li><button>TAP</button></li>
-            </ul>
-        </nav>
-
-        <!-- ABOUT -->
-        <section class="about">
-
-            <div class="text">
-                <h2>DISCOVER THE PATH YOU WERE MEANT FOR</h2>
-
-                <p>
-                    We are helping creative brands and
-                    individuals build meaningful visual
-                    experiences.
-                </p>
-
-                <button>Start Today</button>
-            </div>
-
-            <div class="image">
-                <img src="model2.jpg" alt="">
-            </div>
-
-        </section>
-
-        <!-- SERVICES -->
-        <section class="services">
-
-            <div class="service">
-                <span>01.</span>
-                <h3>WEBSITE DESIGN</h3>
-                <span>→</span>
-            </div>
-
-            <div class="service">
-                <span>02.</span>
-                <h3>Branding Strategy</h3>
-                <span>→</span>
-            </div>
-
-            <div class="service">
-                <span>03.</span>
-                <h3>WEBSITE DESIGN</h3>
-                <span>→</span>
-            </div>
-
-            <div class="service">
-                <span>04.</span>
-                <h3>Branding Strategy</h3>
-                <span>→</span>
-            </div>
-
-        </section>
-
-        <!-- GALLERY -->
-        <section class="gallery">
-
-            <img src="gallery1.jpg" alt="">
-            <img src="gallery2.jpg" alt="">
-            <img src="gallery3.jpg" alt="">
-
-        </section>
-
-    </div>
-
+      <section class="bottom-grid">
+        <div class="grid-item">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Fashion item" />
+        </div>
+        <div class="grid-item">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Magazine" />
+        </div>
+        <div class="grid-item">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Shoes" />
+        </div>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#e5e1d8;
-    font-family:'Inter', sans-serif;
-    display:flex;
-    justify-content:center;
-    padding:40px 20px;
-}
-
-.container{
-    width:100%;
-    max-width:900px;
-    background:#f4f0e8;
-}
-
-/* HERO */
-
-.hero{
-    position:relative;
-    height:650px;
-    overflow:hidden;
-}
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.hero h1{
-    position:absolute;
-    top:20px;
-    left:20px;
-
-    font-family:'Cormorant Garamond', serif;
-    font-size:90px;
-    font-weight:300;
-
-    color:#ece5a5;
-    letter-spacing:2px;
-}
-
-.badge{
-    position:absolute;
-    top:90px;
-    left:120px;
-
-    background:#3d6eff;
-    color:white;
-
-    padding:8px 18px;
-    border-radius:50px;
-    font-size:12px;
-}
-
-.hero-text{
-    position:absolute;
-    right:30px;
-    bottom:40px;
-
-    width:180px;
-
-    font-size:14px;
-    text-align:right;
-    font-weight:500;
-}
-
-/* NAV */
-
-nav{
-    background:#2f67ff;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:15px 25px;
-}
-
-nav li{
-    color:white;
-    font-size:12px;
-    letter-spacing:1px;
-}
-
-nav button{
-    border:none;
-    background:#ffe86f;
-    padding:6px 16px;
-    border-radius:30px;
-    cursor:pointer;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-}
-
-.text{
-    padding:60px;
-}
-
-.text h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:40px;
-    line-height:1;
-    margin-bottom:25px;
-}
-
-.text p{
-    color:#555;
-    margin-bottom:30px;
-    line-height:1.6;
-}
-
-.text button{
-    border:none;
-    background:#e5e16a;
-    padding:12px 25px;
-    border-radius:30px;
-}
-
-.image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* SERVICES */
-
-.services{
-    background:#ece8df;
-}
-
-.service{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:25px 40px;
-
-    border-top:1px solid #c9c4ba;
-}
-
-.service h3{
-    font-size:20px;
-    letter-spacing:1px;
-}
-
-.service span{
-    color:#666;
-}
-
-/* GALLERY */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-}
-
-.gallery img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .hero{
-        height:500px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
-
-    .gallery img{
-        height:250px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        gap:10px;
-    }
-}
