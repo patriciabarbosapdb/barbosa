@@ -1,1 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PB lab | Sobre mim</title>
+  <style>
+    :root{
+      --paper: #f5efe5;
+      --paper-2: #fbf7f0;
+      --ink: #181512;
+      --muted: #6c635a;
+      --blue: #2f63d6;
+      --yellow: #f4ea83;
+      --line: rgba(0,0,0,.10);
+    }
 
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html, body{
+      width:100%;
+      min-height:100%;
+    }
+
+    body{
+      min-height:100dvh;
+      width:100vw;
+      overflow-x:hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 14% 20%, rgba(255,245,200,.72), transparent 18%),
+        radial-gradient(circle at 85% 78%, rgba(255,233,145,.55), transparent 16%),
+        linear-gradient(135deg, #cdc8bf 0%, #f3efe8 44%, #d7d1c7 100%);
+    }
+
+    .page{
+      width:100vw;
+      min-height:100dvh;
+    }
+
+    .shell{
+      width:100%;
+      min-height:100dvh;
+      position:relative;
+      background:var(--paper);
+      overflow:hidden;
+    }
+
+    .brand{
+      position:absolute;
+      top:18px;
+      left:16px;
+      z-index:10;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 7vw, 44px);
+      line-height:1;
+      letter-spacing:.5px;
+      color:#efe56d;
+      text-shadow:0 1px 0 rgba(0,0,0,.08);
+      mix-blend-mode: screen;
+      pointer-events:none;
+    }
+
+    .price-badge{
+      position:absolute;
+      top:12px;
+      right:12px;
+      z-index:10;
+      transform:rotate(12deg);
+      background:var(--yellow);
+      color:#191610;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:28px;
+      font-style:italic;
+      padding:16px 22px;
+      border-radius:50% 50% 50% 8px;
+      box-shadow:0 10px 20px rgba(0,0,0,.12);
+      pointer-events:none;
+    }
+
+    .hero{
+      position:relative;
+      background:#111;
+    }
+
+    .hero-top{
+      position:absolute;
+      left:16px;
+      right:16px;
+      top:18px;
+      z-index:4;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+
+    .circle-logo{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#f1f1f1;
+      color:#111;
+      display:grid;
+      place-items:center;
+      font-size:24px;
+      font-weight:700;
+      box-shadow:0 8px 18px rgba(0,0,0,.22);
+    }
+
+    .mini-tag{
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(79, 120, 255, .95);
+      color:#fff;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .hero-img{
+      height: clamp(280px, 36vh, 500px);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      object-position:center top;
+      filter:saturate(.95) contrast(1.03);
+    }
+
+    .hero-title{
+      position:absolute;
+      right:16px;
+      bottom:18px;
+      color:#14110f;
+      background:rgba(245,239,229,.82);
+      padding:10px 14px;
+      border-radius:12px;
+      backdrop-filter: blur(4px);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:14px;
+      letter-spacing:.5px;
+      text-transform:uppercase;
+      max-width:220px;
+      text-align:right;
+    }
+
+    .intro{
+      background:var(--paper);
+      padding:18px 18px 20px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:end;
+      border-bottom:1px solid var(--line);
+    }
+
+    .intro h1{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height:.95;
+      font-weight:400;
+      letter-spacing:-.2px;
+      color:#24201c;
+      max-width:340px;
+      text-transform:uppercase;
+    }
+
+    .intro-right{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .intro p{
+      font-size:12px;
+      line-height:1.45;
+      color:var(--muted);
+      max-width:210px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 14px;
+      border-radius:999px;
+      background:#f4ea83;
+      color:#111;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:700;
+      border:1px solid rgba(0,0,0,.10);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:14px 16px 12px;
+      background:var(--blue);
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+
+    .nav a{
+      color:#fff;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      opacity:.95;
+    }
+
+    .nav a:hover{
+      opacity:1;
+      text-decoration:underline;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+      border-top:1px solid var(--line);
+      background:var(--paper);
+    }
+
+    .about-photo{
+      min-height:100%;
+      background:#ddd;
+      overflow:hidden;
+    }
+
+    .about-photo img{
+      width:100%;
+      height:100%;
+      min-height:320px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .about-content{
+      padding:26px 22px;
+      border-left:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      justify-content:center;
+    }
+
+    .about-content h2{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight:400;
+      text-transform:uppercase;
+      line-height:1;
+    }
+
+    .about-content p{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+      max-width:420px;
+    }
+
+    .facts{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:4px;
+    }
+
+    .fact{
+      background:var(--paper-2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+    }
+
+    .fact span{
+      display:block;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+
+    .fact strong{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:18px;
+      font-weight:400;
+      color:#201d19;
+    }
+
+    .services{
+      background:var(--paper);
+      border-top:1px solid var(--line);
+    }
+
+    .service-row{
+      display:grid;
+      grid-template-columns:42px 1fr 28px;
+      align-items:center;
+      gap:8px;
+      padding:17px 16px;
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+    }
+
+    .service-row.alt{
+      background:var(--paper-2);
+      font-family:"Times New Roman", serif;
+      font-style:italic;
+    }
+
+    .service-row span:first-child{
+      font-size:12px;
+      color:#7e746b;
+    }
+
+    .service-row h3{
+      font-size:16px;
+      letter-spacing:.4px;
+      font-weight:700;
+      color:#171717;
+    }
+
+    .arrow{
+      text-align:right;
+      font-size:20px;
+      color:#333;
+    }
+
+    .footer-note{
+      padding:20px 18px 26px;
+      background:var(--paper-2);
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .footer-note p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+      max-width:560px;
+    }
+
+    .footer-note span{
+      font-size:11px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    @media (max-width: 900px){
+      .intro,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .about-content{
+        border-left:0;
+        border-top:1px solid var(--line);
+      }
+
+      .facts{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 480px){
+      .brand{
+        font-size:28px;
+      }
+
+      .nav{
+        gap:12px;
+      }
+
+      .circle-logo{
+        width:50px;
+        height:50px;
+      }
+
+      .price-badge{
+        font-size:24px;
+        padding:14px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="shell">
+      <div class="brand">Barbosa</div>
+      <div class="price-badge">02</div>
+
+      <header class="hero">
+        <div class="hero-top">
+          <div class="circle-logo">P</div>
+          <div class="mini-tag">Sobre mim</div>
+        </div>
+
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1600&q=80" alt="Foto de apresentação" />
+          <div class="hero-title">Sobre mim • PB lab</div>
+        </div>
+
+        <div class="intro">
+          <h1>Uma apresentação simples, elegante e focada no meu trabalho criativo.</h1>
+          <div class="intro-right">
+            <p>Esta página serve para contar a tua história, mostrar a tua abordagem e criar ligação com quem visita o teu site.</p>
+            <a class="btn" href="#sobre">Ler mais</a>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="index.html">Início</a>
+          <a href="fotografia.html">Fotografia</a>
+          <a href="design.html">Design</a>
+          <a href="video.html">Video</a>
+        </nav>
+      </header>
+
+      <section class="about-grid" id="sobre">
+        <div class="about-photo">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80" alt="Retrato de trabalho" />
+        </div>
+
+        <div class="about-content">
+          <h2>Quem sou eu</h2>
+          <p>
+            Sou a pessoa por trás do PB lab. Trabalho com imagem, composição e identidade visual,
+            criando peças que unem estética, intenção e detalhe.
+          </p>
+          <p>
+            O meu objetivo é apresentar trabalho de forma clara e com personalidade, mantendo
+            sempre uma linguagem visual forte e consistente.
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <span>Área</span>
+              <strong>Fotografia</strong>
+            </div>
+            <div class="fact">
+              <span>Estilo</span>
+              <strong>Editorial</strong>
+            </div>
+            <div class="fact">
+              <span>Base</span>
+              <strong>PB lab</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <article class="service-row">
+          <span>01.</span>
+          <h3>Apresentação pessoal</h3>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row alt">
+          <span>02.</span>
+          <h3>Processo criativo</h3>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row">
+          <span>03.</span>
+          <h3>Objetivos e visão</h3>
+          <span class="arrow">→</span>
+        </article>
+        <article class="service-row alt">
+          <span>04.</span>
+          <h3>Contacto</h3>
+          <span class="arrow">→</span>
+        </article>
+      </section>
+
+      <section class="footer-note">
+        <p>Usa esta página para explicar quem és, o que fazes e porque o teu trabalho é diferente. O tom deve ser pessoal, mas limpo e profissional.</p>
+        <span>PB lab • Sobre</span>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
