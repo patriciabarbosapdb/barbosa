@@ -117,12 +117,14 @@
     }
 
     .hero-img img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      object-position:center top;
-    }
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  /* Mude 'center top' para valores como '50% 30%' ou '50% 50%' */
+  /* O primeiro valor é horizontal, o segundo é vertical */
+  object-position: 50% 30%; 
+}
 
     .hero-copy{
       background:var(--paper);
