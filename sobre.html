@@ -1,1 +1,1039 @@
+<!DOCTYPE html>
+<html lang="pt">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sobre Mim | Barbosa</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+
+<style>
+
+:root{
+
+    --paper:#f5efe5;
+    --paper-2:#faf6ef;
+    --ink:#171412;
+    --muted:#6b625a;
+    --yellow:#f4ea83;
+    --brown:#502F1F;
+    --line:rgba(0,0,0,.10);
+
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html,body{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+
+    radial-gradient(circle at 14% 20%, rgba(255,245,200,.70), transparent 18%),
+
+    radial-gradient(circle at 85% 78%, rgba(255,233,145,.55), transparent 16%),
+
+    linear-gradient(135deg,#cdc8bf 0%,#f3efe8 44%,#d7d1c7 100%);
+
+    color:var(--ink);
+
+}
+
+
+
+.card{
+
+    width:100%;
+    min-height:100vh;
+    background:var(--paper);
+
+}
+
+
+
+.brand{
+
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:20;
+
+}
+
+
+.brand img{
+
+    width:180px;
+
+}
+
+
+
+/* CAPA */
+
+
+.hero{
+
+    position:relative;
+
+}
+
+
+.hero img{
+
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+
+}
+
+
+
+/* MENU */
+
+
+.nav{
+
+    background:var(--brown);
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:15px;
+
+}
+
+
+.nav a{
+
+    color:white;
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+
+.nav a:hover{
+
+    color:var(--yellow);
+
+}
+
+
+
+/* CONTEÚDO */
+
+
+.intro{
+
+    padding:70px 8%;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+
+.intro h1{
+
+    font-family:Georgia,serif;
+
+    font-size:58px;
+
+    line-height:.95;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.intro p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/* CARD */
+
+
+.side-card{
+
+    background:#faf6ef;
+
+    padding:30px;
+
+    border:1px solid var(--line);
+
+}
+
+
+.side-card h3{
+
+    margin-bottom:20px;
+
+}
+
+
+.side-card p{
+
+    margin-bottom:15px;
+
+    font-size:14px;
+
+}
+
+
+
+/* TITULOS */
+
+
+.section-title{
+
+    padding:60px 8% 20px;
+
+    font-family:Georgia,serif;
+
+    font-size:42px;
+
+}
+
+
+
+/* IMAGENS */
+
+
+.gallery{
+
+    padding:0 8% 60px;
+
+}
+
+
+.gallery img{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* FOOTER */
+
+
+.footer-logo{
+
+    width:180px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:900px){
+
+.intro{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero img{
+
+height:45vh;
+
+}
+
+
+.intro h1{
+
+font-size:42px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+<div class="brand">
+
+<img src="logoescuro.png" alt="Barbosa">
+
+</div>
+
+
+
+<header class="hero">
+
+
+<img src="capa_sobre.png" alt="Patrícia Barbosa">
+
+
+<nav class="nav">
+
+
+<a href="index.html">Início</a>
+
+<a href="moze.html">Moze</a>
+
+<a href="multimedia.html">Multimédia</a>
+
+<a href="lemon.html">Lemon Advertising</a>
+
+<a href="photobook.html">Photobook</a>
+
+<a href="competition.html">Disabled People in Society</a>
+
+<a href="sobre.html">Sobre Mim</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<!-- INTRODUÇÃO -->
+
+
+<section class="intro">
+
+
+<div>
+
+
+<h1>
+
+PATRÍCIA<br>
+
+BARBOSA
+
+</h1>
+
+
+<p>
+
+Sou estudante finalista da Licenciatura em Multimédia na EsACT-IPB,
+com interesse pelas áreas de design gráfico, desenvolvimento web,
+UX/UI Design e comunicação digital.
+
+Ao longo do meu percurso académico desenvolvi projetos que unem
+criatividade e tecnologia, explorando diferentes áreas da multimédia
+desde identidade visual, fotografia, vídeo, motion graphics e
+desenvolvimento de interfaces.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Informação
+
+</h3>
+
+
+<p>
+
+<strong>Nome</strong><br>
+
+Patrícia Barbosa
+
+</p>
+
+
+<p>
+
+<strong>Área</strong><br>
+
+Multimédia
+
+</p>
+
+
+<p>
+
+<strong>Instituição</strong><br>
+
+EsACT-IPB
+
+</p>
+
+
+<p>
+
+<strong>Ano</strong><br>
+
+2026
+
+</p>
+
+
+</div>
+
+</section>
+<!-- PERCURSO ACADÉMICO -->
+
+
+<h2 class="section-title">
+
+Percurso Académico
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+O meu percurso na área da Multimédia começou com o objetivo de explorar
+a ligação entre criatividade, comunicação e tecnologia.
+
+Durante a Licenciatura em Multimédia na <strong>EsACT-IPB</strong>,
+desenvolvi competências em várias áreas, desde o design visual até ao
+desenvolvimento de soluções digitais interativas.
+
+<br><br>
+
+
+Ao longo do curso participei em diferentes projetos académicos,
+trabalhando áreas como identidade visual, fotografia, edição de vídeo,
+UX/UI Design, desenvolvimento web e produção multimédia.
+
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Formação
+
+</h3>
+
+
+<p>
+
+<strong>Curso</strong><br>
+
+Licenciatura em Multimédia
+
+</p>
+
+
+<p>
+
+<strong>Instituição</strong><br>
+
+EsACT-IPB
+
+</p>
+
+
+<p>
+
+<strong>Área</strong><br>
+
+Comunicação e Tecnologia
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- COMPETÊNCIAS -->
+
+
+<h2 class="section-title">
+
+Competências
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+<strong>Design Gráfico</strong><br>
+
+Criação de identidades visuais, composição gráfica e desenvolvimento de
+materiais digitais.
+
+
+<br><br>
+
+
+
+<strong>UX/UI Design</strong><br>
+
+Planeamento de interfaces, criação de protótipos e melhoria da
+experiência do utilizador.
+
+
+<br><br>
+
+
+
+<strong>Desenvolvimento Web</strong><br>
+
+Criação de páginas web através de HTML, CSS, PHP e integração de bases
+de dados.
+
+
+<br><br>
+
+
+
+<strong>Multimédia</strong><br>
+
+Produção e edição de imagem, vídeo, animação e conteúdos digitais.
+
+
+<br><br>
+
+
+
+<strong>Fotografia</strong><br>
+
+Captura, edição e tratamento de imagem para diferentes contextos
+criativos.
+
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Ferramentas
+
+</h3>
+
+
+<p>
+
+Adobe Illustrator
+
+</p>
+
+
+<p>
+
+Adobe Photoshop
+
+</p>
+
+
+<p>
+
+Adobe Premiere
+
+</p>
+
+
+<p>
+
+After Effects
+
+</p>
+
+
+<p>
+
+Lightroom
+
+</p>
+
+
+<p>
+
+Figma
+
+</p>
+
+
+<p>
+
+Visual Studio Code
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ÁREAS DE INTERESSE -->
+
+
+<h2 class="section-title">
+
+Áreas Criativas
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+As áreas que mais despertam o meu interesse dentro da Multimédia estão
+relacionadas com a criação de experiências visuais e digitais.
+
+<br><br>
+
+
+Tenho especial interesse por:
+
+<br><br>
+
+
+• Branding e identidade visual;
+
+<br>
+
+• Design de interfaces;
+
+<br>
+
+• Fotografia criativa;
+
+<br>
+
+• Motion Graphics;
+
+<br>
+
+• Desenvolvimento web;
+
+<br>
+
+• Comunicação digital.
+
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FOTOGRAFIA -->
+
+
+<h2 class="section-title">
+
+Fotografia
+
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="fotografia_sobre.png" alt="Fotografia Patrícia Barbosa">
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PROJETOS -->
+
+
+<h2 class="section-title">
+
+Projetos em Destaque
+
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="projetos_sobre.png" alt="Projetos Multimédia">
+
+
+</section>
+<!-- FILOSOFIA -->
+
+
+<h2 class="section-title">
+
+A Minha Abordagem
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+Acredito que o design deve unir criatividade, funcionalidade e
+comunicação.
+
+Cada projeto é uma oportunidade para transformar ideias em experiências
+visuais capazes de transmitir uma mensagem clara e criar uma ligação
+com o utilizador.
+
+O meu objetivo enquanto profissional da área da Multimédia é continuar
+a evoluir, explorando novas ferramentas e desenvolvendo soluções
+digitais inovadoras.
+
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Valores
+
+</h3>
+
+
+<p>
+
+Criatividade
+
+</p>
+
+
+<p>
+
+Organização
+
+</p>
+
+
+<p>
+
+Aprendizagem contínua
+
+</p>
+
+
+<p>
+
+Atenção ao detalhe
+
+</p>
+
+
+<p>
+
+Comunicação visual
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CONTACTO -->
+
+
+<section style="
+
+padding:80px 8%;
+
+text-align:center;
+
+">
+
+
+
+<h2 style="
+
+font-family:Georgia,serif;
+
+font-size:48px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+">
+
+
+Vamos Criar Algo?
+
+
+</h2>
+
+
+
+
+<p style="
+
+max-width:700px;
+
+margin:auto;
+
+color:#6b625a;
+
+line-height:1.8;
+
+">
+
+
+Se procuras uma pessoa criativa, dedicada e apaixonada por
+comunicação visual e tecnologia, entra em contacto comigo.
+
+
+</p>
+
+
+
+
+<a class="btn"
+
+href="mailto:email@email.com">
+
+
+Contactar
+
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- RODAPÉ -->
+
+
+<footer style="
+
+background:#502F1F;
+
+padding:50px 8%;
+
+text-align:center;
+
+color:white;
+
+">
+
+
+
+<img src="logoclaro.png"
+
+alt="Logótipo Barbosa"
+
+class="footer-logo">
+
+
+
+
+
+<p style="
+
+margin-top:30px;
+
+font-size:13px;
+
+opacity:.6;
+
+">
+
+
+© 2026 Patrícia Barbosa. Todos os direitos reservados.
+
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+</div>
+
+
+</body>
+
+</html>
