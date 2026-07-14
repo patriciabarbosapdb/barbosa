@@ -1,1 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Multimédia | Barbosa</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+:root{
+    --paper:#f5efe5;
+    --paper-2:#faf6ef;
+    --ink:#171412;
+    --muted:#6b625a;
+    --yellow:#f4ea83;
+    --line:rgba(0,0,0,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+    radial-gradient(circle at 14% 20%, rgba(255,245,200,.70), transparent 18%),
+    radial-gradient(circle at 85% 78%, rgba(255,233,145,.55), transparent 16%),
+    linear-gradient(135deg,#cdc8bf 0%,#f3efe8 44%,#d7d1c7 100%);
+    color:var(--ink);
+}
+
+.card{
+    width:100%;
+    min-height:100vh;
+    background:var(--paper);
+}
+
+.brand{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:20;
+}
+
+.brand img{
+    width:180px;
+}
+
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    display:block;
+}
+
+.nav{
+    background:#502F1F;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:15px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.nav a:hover{
+    color:var(--yellow);
+}
+
+.intro{
+
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+    align-items:center;
+
+}
+
+.intro h1{
+
+    font-family:Georgia, serif;
+    font-size:58px;
+    line-height:.95;
+    font-weight:400;
+    margin-bottom:20px;
+
+}
+
+.intro p{
+
+    color:var(--muted);
+    line-height:1.8;
+    font-size:16px;
+
+}
+
+.btn{
+
+    display:inline-block;
+    margin-top:30px;
+    background:var(--yellow);
+    color:#111;
+    padding:14px 26px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+.side-card{
+
+    background:#faf6ef;
+    padding:30px;
+    border:1px solid var(--line);
+
+}
+
+.side-card h3{
+
+    margin-bottom:20px;
+    font-size:18px;
+
+}
+
+.side-card p{
+
+    margin-bottom:15px;
+    font-size:14px;
+
+}
+
+.section-title{
+
+    padding:60px 8% 20px;
+
+    font-family:Georgia, serif;
+    font-size:42px;
+
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:0;
+
+}
+
+.gallery img{
+
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    display:block;
+
+}
+
+@media(max-width:900px){
+
+.intro{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.hero img{
+
+height:45vh;
+
+}
+
+.intro h1{
+
+font-size:42px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="brand">
+<img src="logoclaro.png" alt="Barbosa">
+</div>
+
+<header class="hero">
+
+<img src="multimedia-hero.jpg" alt="Projeto Multimédia">
+
+<nav class="nav">
+
+<a href="index.html">Início</a>
+<a href="moze.html">Moze</a>
+<a href="multimedia.html">Multimédia</a>
+<a href="lemon.html">Lemon Advertising</a>
+<a href="photobook.html">Photobook</a>
+<a href="competition.html">Disabled People in Society</a>
+<a href="sobre.html">Sobre Mim</a>
+
+</nav>
+
+</header>
+
+<section class="intro">
+
+<div>
+
+<h1>MULTIMÉDIA<br>IPB</h1>
+
+<p>
+
+Projeto académico desenvolvido para divulgar a Licenciatura em Multimédia do Instituto Politécnico de Bragança através de uma estratégia de comunicação digital. O objetivo foi reunir, num único espaço, todas as plataformas do curso, tornando a informação mais acessível para futuros estudantes.
+
+</p>
+
+<a href="https://linktr.ee/multimedia.ipb" class="btn" target="_blank">
+
+Ver Projeto
+
+</a>
+
+</div>
+
+<div class="side-card">
+
+<h3>Informação</h3>
+
+<p><strong>Tipo</strong><br>Projeto Académico</p>
+
+<p><strong>Ano</strong><br>2025</p>
+
+<p><strong>Ferramentas</strong><br>Linktree<br>Adobe Illustrator<br>Adobe Photoshop</p>
+
+<p><strong>Cliente</strong><br>Licenciatura em Multimédia - IPB</p>
+
+</div>
+
+</section>
+<!-- SOBRE O PROJETO -->
+
+<h2 class="section-title">Sobre o Projeto</h2>
+
+<section class="intro">
+
+    <div>
+
+        <p>
+            O projeto <strong>Multimédia IPB</strong> foi desenvolvido com o objetivo de
+            reforçar a presença digital da Licenciatura em Multimédia do Instituto
+            Politécnico de Bragança.
+        </p>
+
+        <br>
+
+        <p>
+            Através da criação de uma página Linktree, foi possível reunir, num único
+            local, todas as plataformas do curso, incluindo redes sociais,
+            website, contactos e outros recursos importantes para estudantes e
+            futuros candidatos.
+        </p>
+
+        <br>
+
+        <p>
+            O foco principal foi criar uma comunicação clara, organizada e moderna,
+            permitindo um acesso rápido às diferentes plataformas e melhorando a
+            experiência do utilizador.
+        </p>
+
+    </div>
+
+    <div class="side-card">
+
+        <h3>Objetivos</h3>
+
+        <p>✓ Centralizar toda a informação do curso.</p>
+
+        <p>✓ Melhorar a comunicação digital.</p>
+
+        <p>✓ Facilitar o acesso às plataformas.</p>
+
+        <p>✓ Promover a Licenciatura em Multimédia.</p>
+
+    </div>
+
+</section>
+
+
+<!-- GALERIA -->
+
+<h2 class="section-title">Galeria</h2>
+
+<section class="gallery">
+
+    <img src="multimedia1.jpg" alt="Projeto">
+
+    <img src="multimedia2.jpg" alt="Projeto">
+
+</section>
+
+
+<section class="gallery">
+
+    <img src="multimedia3.jpg" alt="Projeto">
+
+    <img src="multimedia4.jpg" alt="Projeto">
+
+</section>
+
+
+<!-- CONTRIBUTO -->
+
+<h2 class="section-title">O meu contributo</h2>
+
+<section class="intro">
+
+    <div>
+
+        <p>
+            Durante o desenvolvimento deste projeto participei na criação da
+            estratégia de comunicação digital, na organização da informação e na
+            construção da página Linktree.
+        </p>
+
+        <br>
+
+        <p>
+            Trabalhei na seleção dos conteúdos, na definição da estrutura da
+            página e na criação de uma identidade visual coerente com a imagem da
+            Licenciatura em Multimédia.
+        </p>
+
+        <br>
+
+        <p>
+            O resultado foi uma plataforma simples, intuitiva e adaptada à
+            utilização em dispositivos móveis, permitindo aos utilizadores
+            encontrar rapidamente toda a informação relevante do curso.
+        </p>
+
+    </div>
+
+    <div class="side-card">
+
+        <h3>Competências</h3>
+
+        <p>Comunicação Digital</p>
+
+        <p>Organização de Conteúdos</p>
+
+        <p>Identidade Visual</p>
+
+        <p>Design Gráfico</p>
+
+        <p>UX/UI</p>
+
+        <p>Gestão de Redes Sociais</p>
+
+    </div>
+
+</section>
+
+
+<!-- SEGUNDA GALERIA -->
+
+<section class="gallery">
+
+    <img src="multimedia5.jpg" alt="Projeto">
+
+    <img src="multimedia6.jpg" alt="Projeto">
+
+</section>
+<!-- FERRAMENTAS -->
+
+<h2 class="section-title">Ferramentas Utilizadas</h2>
+
+<section class="intro">
+
+    <div>
+
+        <p>
+            Para desenvolver este projeto foram utilizadas diferentes ferramentas
+            de design e comunicação digital, permitindo criar uma presença online
+            organizada, consistente e adaptada aos diferentes públicos.
+        </p>
+
+    </div>
+
+    <div class="side-card">
+
+        <h3>Software</h3>
+
+        <p>Adobe Illustrator</p>
+
+        <p>Adobe Photoshop</p>
+
+        <p>Linktree</p>
+
+        <p>Instagram</p>
+
+        <p>Meta Business Suite</p>
+
+    </div>
+
+</section>
+
+
+<!-- BOTÃO -->
+
+<section style="padding:80px 8%; text-align:center;">
+
+    <h2 style="
+        font-family:Georgia,serif;
+        font-size:48px;
+        font-weight:400;
+        margin-bottom:20px;">
+
+        Explorar o Projeto
+
+    </h2>
+
+    <p style="
+        max-width:700px;
+        margin:auto;
+        color:#6b625a;
+        line-height:1.8;">
+
+        A página Linktree reúne todas as plataformas da Licenciatura em
+        Multimédia, facilitando o acesso à informação e promovendo o curso
+        através de uma comunicação digital simples e intuitiva.
+
+    </p>
+
+    <a class="btn"
+       href="https://linktr.ee/multimedia.ipb"
+       target="_blank"
+       style="margin-top:40px;">
+
+        Visitar Linktree
+
+    </a>
+
+</section>
+
+
+<!-- RODAPÉ -->
+
+<footer style="
+background:#502F1F;
+padding:50px 8%;
+text-align:center;
+color:white;">
+
+<h3 style="
+font-family:Georgia, serif;
+font-weight:400;
+font-size:32px;
+margin-bottom:15px;">
+
+Barbosa
+
+</h3>
+
+<p style="opacity:.8;">
+
+Portfólio de Design, Fotografia e Multimédia
+
+</p>
+
+<p style="
+margin-top:30px;
+font-size:13px;
+opacity:.6;">
+
+© 2026 Patrícia Barbosa. Todos os direitos reservados.
+
+</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
