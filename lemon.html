@@ -1,1 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lemon Advertising | Barbosa</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+
+<style>
+
+:root{
+
+    --paper:#f5efe5;
+    --paper-2:#faf6ef;
+    --ink:#171412;
+    --muted:#6b625a;
+    --yellow:#f4ea83;
+    --brown:#502F1F;
+    --line:rgba(0,0,0,.10);
+
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html,body{
+
+    width:100%;
+    min-height:100%;
+
+}
+
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:
+
+    radial-gradient(circle at 14% 20%, rgba(255,245,200,.70), transparent 18%),
+
+    radial-gradient(circle at 85% 78%, rgba(255,233,145,.55), transparent 16%),
+
+    linear-gradient(135deg,#cdc8bf 0%,#f3efe8 44%,#d7d1c7 100%);
+
+    color:var(--ink);
+
+}
+
+
+
+.card{
+
+    width:100%;
+    min-height:100vh;
+    background:var(--paper);
+
+}
+
+
+
+.brand{
+
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:20;
+
+}
+
+
+
+.brand img{
+
+    width:180px;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+    position:relative;
+
+}
+
+
+
+.hero img{
+
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    display:block;
+
+}
+
+
+
+/* MENU */
+
+
+.nav{
+
+    background:var(--brown);
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:15px;
+
+}
+
+
+
+.nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+
+
+.nav a:hover{
+
+    color:var(--yellow);
+
+}
+
+
+
+/* INTRO */
+
+
+.intro{
+
+    padding:70px 8%;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+
+.intro h1{
+
+    font-family:Georgia, serif;
+
+    font-size:58px;
+
+    line-height:.95;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.intro p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/* BOTÃO */
+
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:var(--yellow);
+
+    color:#111;
+
+    padding:14px 26px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* CARTÃO */
+
+
+.side-card{
+
+    background:#faf6ef;
+
+    padding:30px;
+
+    border:1px solid var(--line);
+
+}
+
+
+
+.side-card h3{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+
+
+.side-card p{
+
+    margin-bottom:15px;
+
+    font-size:14px;
+
+}
+
+
+
+/* TITULOS */
+
+
+.section-title{
+
+    padding:60px 8% 20px;
+
+    font-family:Georgia, serif;
+
+    font-size:42px;
+
+}
+
+
+
+/* GALERIA */
+
+
+.gallery{
+
+    padding:0 8% 60px;
+
+}
+
+
+
+.gallery img{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+.footer-logo{
+
+    width:180px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:900px){
+
+
+.intro{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero img{
+
+height:45vh;
+
+}
+
+
+.intro h1{
+
+font-size:42px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+<div class="brand">
+
+<img src="logoclaro.png" alt="Barbosa">
+
+</div>
+
+
+
+<header class="hero">
+
+
+<img src="lemoncapa.jpg" alt="Lemon Advertising">
+
+
+<nav class="nav">
+
+
+<a href="index.html">Início</a>
+
+<a href="moze.html">Moze</a>
+
+<a href="multimedia.html">Multimédia</a>
+
+<a href="lemon.html">Lemon Advertising</a>
+
+<a href="photobook.html">Photobook</a>
+
+<a href="competition.html">Disabled People in Society</a>
+
+<a href="sobre.html">Sobre Mim</a>
+
+
+</nav>
+<!-- INTRODUÇÃO LEMON -->
+
+<section class="intro">
+
+
+<div>
+
+
+<h1>
+LEMON<br>
+ADVERTISING
+</h1>
+
+
+<p>
+
+Estágio curricular desenvolvido na agência criativa 
+<strong>Lemon Advertising</strong>, no Porto, integrado na Licenciatura 
+em Multimédia da EsACT-IPB.
+
+Durante este período foi possível aplicar conhecimentos de design,
+multimédia, comunicação digital e experiência do utilizador em projetos
+reais para clientes.
+
+O objetivo principal passou por contribuir para a criação de conteúdos
+visuais, desenvolvimento de identidades gráficas, produção multimédia e
+melhoria da comunicação digital da agência.
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+
+<h3>Informação</h3>
+
+
+<p>
+<strong>Tipo</strong><br>
+Estágio Curricular
+</p>
+
+
+<p>
+<strong>Ano</strong><br>
+2026
+</p>
+
+
+<p>
+<strong>Empresa</strong><br>
+Lemon Advertising
+</p>
+
+
+<p>
+<strong>Localização</strong><br>
+Porto, Portugal
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SOBRE A EMPRESA -->
+
+
+<h2 class="section-title">
+Sobre a Lemon
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+A <strong>Lemon Advertising</strong> é uma agência criativa dedicada ao
+desenvolvimento de estratégias de comunicação, branding, marketing
+digital e criação de conteúdos.
+
+A agência trabalha diferentes áreas da comunicação visual, combinando
+criatividade, estratégia e tecnologia para criar soluções adaptadas às
+necessidades de cada marca.
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- EXPERIÊNCIA -->
+
+
+<h2 class="section-title">
+Experiência de Estágio
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+Durante o estágio foram desenvolvidas várias tarefas relacionadas com
+design gráfico, multimédia e comunicação digital.
+
+Entre as principais atividades destacam-se:
+
+<br><br>
+
+
+• Criação e adaptação de conteúdos para redes sociais;
+
+<br>
+
+• Desenvolvimento de peças gráficas digitais;
+
+<br>
+
+• Apoio na construção de identidades visuais;
+
+<br>
+
+• Análise e melhoria de interfaces digitais;
+
+<br>
+
+• Criação e edição de conteúdos multimédia;
+
+<br>
+
+• Apoio em projetos de comunicação para clientes.
+
+
+</p>
+
+
+</div>
+
+
+<div class="side-card">
+
+
+<h3>
+Contributo
+</h3>
+
+
+<p>
+
+Aplicação prática dos conhecimentos adquiridos durante a licenciatura,
+aliando design, tecnologia e comunicação.
+
+</p>
+
+
+<p>
+
+Participação em projetos reais, seguindo processos profissionais de
+criatividade e produção.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- GALERIA -->
+
+
+<h2 class="section-title">
+Projetos Desenvolvidos
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="lemonprojetos.jpg" alt="Projetos Lemon Advertising">
+
+
+</section>
+
+
+
+
+
+<!-- SEGUNDA GALERIA -->
+
+
+<section class="gallery">
+
+
+<img src="lemonestagio.jpg" alt="Estágio Lemon Advertising">
+
+
+</section>
+  <!-- COMPETÊNCIAS -->
+
+<h2 class="section-title">
+Competências Desenvolvidas
+</h2>
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+O estágio na Lemon Advertising permitiu desenvolver competências
+técnicas e criativas na área da comunicação multimédia.
+
+Ao longo do projeto foram aprofundados conhecimentos em:
+
+<br><br>
+
+<strong>Design Gráfico</strong><br>
+Criação de materiais visuais, composição gráfica e adaptação de
+elementos para diferentes formatos digitais.
+
+<br><br>
+
+<strong>UX/UI Design</strong><br>
+Análise de interfaces, organização de informação e melhoria da
+experiência do utilizador.
+
+<br><br>
+
+<strong>Motion Graphics</strong><br>
+Produção e edição de conteúdos animados para comunicação digital.
+
+<br><br>
+
+<strong>Comunicação Digital</strong><br>
+Desenvolvimento de conteúdos pensados para diferentes plataformas e
+públicos.
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+
+<h3>
+Ferramentas
+</h3>
+
+
+<p>
+Adobe Illustrator
+</p>
+
+<p>
+Adobe Photoshop
+</p>
+
+<p>
+Adobe Premiere
+</p>
+
+<p>
+After Effects
+</p>
+
+<p>
+Figma
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- REFLEXÃO -->
+
+<h2 class="section-title">
+Reflexão Final
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+O estágio na Lemon Advertising representou uma oportunidade de aplicar
+os conhecimentos adquiridos durante a Licenciatura em Multimédia em um
+contexto profissional.
+
+A experiência permitiu compreender melhor o funcionamento de uma agência
+criativa, o desenvolvimento de projetos para clientes reais e a
+importância da colaboração entre diferentes áreas.
+
+Este percurso contribuiu para o crescimento profissional e pessoal,
+reforçando competências de organização, criatividade e resolução de
+problemas.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- LINK EMPRESA -->
+
+
+<section style="
+padding:80px 8%;
+text-align:center;
+">
+
+
+<h2 style="
+font-family:Georgia,serif;
+font-size:48px;
+font-weight:400;
+margin-bottom:20px;
+">
+
+
+Conhecer a Lemon
+
+
+</h2>
+
+
+
+<p style="
+max-width:700px;
+margin:auto;
+color:#6b625a;
+line-height:1.8;
+">
+
+
+Descobre mais sobre a agência criativa responsável por esta experiência
+profissional e os seus projetos.
+
+
+</p>
+
+
+
+<a class="btn"
+href="https://lemon.pt"
+target="_blank">
+
+
+Visitar Website
+
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- RODAPÉ -->
+
+
+<footer style="
+
+background:#502F1F;
+
+padding:50px 8%;
+
+text-align:center;
+
+color:white;
+
+">
+
+
+
+<img src="logoclaro.png"
+alt="Logótipo Barbosa"
+class="footer-logo">
+
+
+
+<p style="
+margin-top:30px;
+font-size:13px;
+opacity:.6;
+">
+
+
+© 2026 Patrícia Barbosa. Todos os direitos reservados.
+
+
+</p>
+
+
+
+</footer>
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
+
+</header>
