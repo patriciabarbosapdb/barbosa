@@ -1,1 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MOZE | Barbosa</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+
+<style>
+
+:root{
+
+    --paper:#f5efe5;
+    --paper-2:#faf6ef;
+    --ink:#171412;
+    --muted:#6b625a;
+    --yellow:#f4ea83;
+    --brown:#502F1F;
+    --line:rgba(0,0,0,.10);
+
+}
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+
+html,body{
+
+width:100%;
+min-height:100%;
+
+}
+
+
+
+body{
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:
+
+radial-gradient(circle at 14% 20%, rgba(255,245,200,.70), transparent 18%),
+
+radial-gradient(circle at 85% 78%, rgba(255,233,145,.55), transparent 16%),
+
+linear-gradient(135deg,#cdc8bf 0%,#f3efe8 44%,#d7d1c7 100%);
+
+color:var(--ink);
+
+}
+
+
+
+.card{
+
+width:100%;
+min-height:100vh;
+background:var(--paper);
+
+}
+
+
+
+.brand{
+
+position:absolute;
+top:18px;
+left:18px;
+z-index:20;
+
+}
+
+
+
+.brand img{
+
+width:180px;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+position:relative;
+
+}
+
+
+
+.hero img{
+
+width:100%;
+height:70vh;
+object-fit:cover;
+display:block;
+
+}
+
+
+
+/* MENU */
+
+
+.nav{
+
+background:var(--brown);
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:15px;
+
+}
+
+
+
+.nav a{
+
+color:white;
+text-decoration:none;
+text-transform:uppercase;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+transition:.3s;
+
+}
+
+
+
+.nav a:hover{
+
+color:var(--yellow);
+
+}
+
+
+
+/* INTRO */
+
+
+.intro{
+
+padding:70px 8%;
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+
+
+.intro h1{
+
+font-family:Georgia, serif;
+
+font-size:58px;
+
+line-height:.95;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+}
+
+
+
+.intro p{
+
+color:var(--muted);
+
+line-height:1.8;
+
+font-size:16px;
+
+}
+
+
+
+/* CARD */
+
+
+.side-card{
+
+background:#faf6ef;
+
+padding:30px;
+
+border:1px solid var(--line);
+
+}
+
+
+
+.side-card h3{
+
+margin-bottom:20px;
+
+font-size:18px;
+
+}
+
+
+
+.side-card p{
+
+margin-bottom:15px;
+
+font-size:14px;
+
+}
+
+
+
+/* TITULOS */
+
+
+.section-title{
+
+padding:60px 8% 20px;
+
+font-family:Georgia, serif;
+
+font-size:42px;
+
+}
+
+
+
+/* GALERIA */
+
+
+.gallery{
+
+padding:0 8% 60px;
+
+}
+
+
+
+.gallery img{
+
+width:100%;
+
+height:450px;
+
+object-fit:cover;
+
+display:block;
+
+margin-bottom:30px;
+
+}
+
+
+
+/* VIDEOS */
+
+
+.video-gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+padding:0 8% 60px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.video-gallery video{
+
+width:300px;
+
+height:540px;
+
+object-fit:contain;
+
+background:#000;
+
+border-radius:10px;
+
+}
+
+
+
+/* BOTÃO */
+
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+background:var(--yellow);
+
+color:#111;
+
+padding:14px 26px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* FOOTER */
+
+
+.footer-logo{
+
+width:180px;
+
+display:block;
+
+margin:0 auto 20px;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.intro{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero img{
+
+height:45vh;
+
+}
+
+
+.intro h1{
+
+font-size:42px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+
+
+<div class="brand">
+
+<img src="logoescuro.png" alt="Barbosa">
+
+</div>
+
+
+
+
+<header class="hero">
+
+
+<img src="capamoze.png" alt="MOZE Website">
+
+
+
+<nav class="nav">
+
+
+<a href="index.html">Início</a>
+
+<a href="moze.html">Moze</a>
+
+<a href="multimedia.html">Multimédia</a>
+
+<a href="lemon.html">Lemon Advertising</a>
+
+<a href="photobook.html">Photobook</a>
+
+<a href="competition.html">Disabled People in Society</a>
+
+<a href="sobre.html">Sobre Mim</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<!-- INTRODUÇÃO -->
+
+
+<section class="intro">
+
+
+<div>
+
+
+<h1>
+
+MOZE<br>
+
+WEBSITE
+
+</h1>
+
+
+
+<p>
+
+
+O projeto <strong>MOZE</strong> consistiu no desenvolvimento de uma
+plataforma web com sistema de registo de utilizadores.
+
+O objetivo foi criar uma experiência digital simples e intuitiva,
+permitindo aos utilizadores criar uma conta e interagir com a plataforma.
+
+O projeto envolveu a criação da interface gráfica, desenvolvimento das
+páginas web e implementação de funcionalidades dinâmicas.
+
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Informação
+
+</h3>
+
+
+<p>
+
+<strong>Tipo</strong><br>
+
+Projeto Web
+
+</p>
+
+
+
+<p>
+
+<strong>Ano</strong><br>
+
+2026
+
+</p>
+
+<p>
+
+<strong>Área</strong><br>
+
+Web Design / Desenvolvimento
+
+</p>
+
+<p>
+
+<strong>Tecnologias</strong><br>
+
+HTML, CSS, PHP, MySQL
+
+</p>
+
+</div>
+
+</section>
+  <!-- SOBRE O PROJETO -->
+
+
+<h2 class="section-title">
+
+Sobre o Projeto
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+A plataforma <strong>MOZE</strong> foi desenvolvida com o objetivo de criar
+uma experiência web funcional, organizada e intuitiva.
+
+O projeto permitiu explorar diferentes áreas do desenvolvimento web,
+desde a criação da interface visual até à implementação de sistemas
+dinâmicos de interação com o utilizador.
+
+Através de uma estrutura simples e moderna, a plataforma permite uma
+navegação acessível e uma melhor organização da informação apresentada.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PROCESSO DE DESENVOLVIMENTO -->
+
+
+<h2 class="section-title">
+
+Processo de Desenvolvimento
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+Durante o desenvolvimento do projeto foram aplicadas várias etapas,
+desde a definição da estrutura visual até à implementação das
+funcionalidades.
+
+<br><br>
+
+
+<strong>Planeamento</strong><br>
+
+Definição da arquitetura do website, organização dos conteúdos e
+estrutura das páginas.
+
+<br><br>
+
+
+<strong>Design da Interface</strong><br>
+
+Criação de uma identidade visual coerente, escolha de cores, tipografia
+e organização dos elementos gráficos.
+
+<br><br>
+
+
+<strong>Desenvolvimento</strong><br>
+
+Implementação das páginas web utilizando tecnologias front-end e
+back-end.
+
+<br><br>
+
+
+<strong>Testes</strong><br>
+
+Verificação da funcionalidade do sistema e melhoria da experiência do
+utilizador.
+
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Tecnologias
+
+</h3>
+
+
+<p>
+
+HTML
+
+</p>
+
+
+<p>
+
+CSS
+
+</p>
+
+
+<p>
+
+PHP
+
+</p>
+
+
+<p>
+
+MySQL
+
+</p>
+
+
+<p>
+
+Base de Dados
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FUNCIONALIDADES -->
+
+
+<h2 class="section-title">
+
+Funcionalidades
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+A plataforma MOZE inclui diferentes funcionalidades desenvolvidas para
+melhorar a interação do utilizador:
+
+<br><br>
+
+
+• Sistema de registo de utilizadores;
+
+<br><br>
+
+• Criação e validação de contas;
+
+<br><br>
+
+• Formulários de interação;
+
+<br><br>
+
+• Ligação com base de dados;
+
+<br><br>
+
+• Organização de conteúdos através de páginas web;
+
+<br><br>
+
+• Interface responsiva adaptada a diferentes dispositivos.
+
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Objetivo
+
+</h3>
+
+
+<p>
+
+
+Criar uma plataforma digital funcional, combinando design e tecnologia
+para proporcionar uma experiência simples e eficiente.
+
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- INTERFACE -->
+
+
+<h2 class="section-title">
+
+Interface
+
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="moze_registo.png" alt="Página de Registo MOZE">
+
+
+<img src="moze_login.png" alt="Página de Login MOZE">
+
+
+<img src="moze_home.png" alt="Página Inicial MOZE">
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- VÍDEOS -->
+
+
+<h2 class="section-title">
+
+Demonstração
+
+</h2>
+
+
+
+<section class="video-gallery">
+
+
+<video controls>
+
+
+<source src="moze_video1.mp4" type="video/mp4">
+
+
+O teu navegador não suporta vídeo.
+
+
+</video>
+
+
+
+
+<video controls>
+
+
+<source src="moze_video2.mp4" type="video/mp4">
+
+
+O teu navegador não suporta vídeo.
+
+
+</video>
+
+
+
+</section>
+
+  <!-- COMPETÊNCIAS -->
+
+
+<h2 class="section-title">
+
+Competências Desenvolvidas
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+O desenvolvimento do projeto MOZE permitiu consolidar conhecimentos
+técnicos e criativos na área da produção multimédia e desenvolvimento
+web.
+
+<br><br>
+
+
+<strong>Web Design</strong><br>
+
+Criação de interfaces digitais organizadas, funcionais e adaptadas ao
+utilizador.
+
+
+<br><br>
+
+
+<strong>Desenvolvimento Front-End</strong><br>
+
+Construção da estrutura visual através de HTML e CSS, garantindo uma
+apresentação consistente e responsiva.
+
+
+<br><br>
+
+
+<strong>Desenvolvimento Back-End</strong><br>
+
+Implementação de funcionalidades dinâmicas através de PHP e ligação com
+base de dados.
+
+
+<br><br>
+
+
+<strong>Experiência do Utilizador</strong><br>
+
+Organização da informação e criação de uma navegação simples e intuitiva.
+
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="side-card">
+
+
+<h3>
+
+Ferramentas
+
+</h3>
+
+
+
+<p>
+
+Visual Studio Code
+
+</p>
+
+
+
+<p>
+
+HTML / CSS
+
+</p>
+
+
+
+<p>
+
+PHP
+
+</p>
+
+
+
+<p>
+
+MySQL
+
+</p>
+
+
+
+<p>
+
+Figma
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- REFLEXÃO FINAL -->
+
+
+<h2 class="section-title">
+
+Reflexão Final
+
+</h2>
+
+
+
+<section class="intro">
+
+
+<div>
+
+
+<p>
+
+
+O projeto MOZE representou uma oportunidade de aplicar conhecimentos
+adquiridos na Licenciatura em Multimédia, explorando a ligação entre
+design e desenvolvimento web.
+
+A criação desta plataforma permitiu compreender melhor o processo de
+construção de um website completo, desde a definição da interface até à
+implementação de funcionalidades interativas.
+
+Este projeto contribuiu para o desenvolvimento de competências técnicas,
+criativas e de resolução de problemas, reforçando a importância da
+combinação entre tecnologia e comunicação visual.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- LINK PROJETO -->
+
+
+<section style="
+
+padding:80px 8%;
+
+text-align:center;
+
+">
+
+
+
+<h2 style="
+
+font-family:Georgia,serif;
+
+font-size:48px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+">
+
+
+Explorar o Projeto
+
+
+</h2>
+
+
+
+
+<p style="
+
+max-width:700px;
+
+margin:auto;
+
+color:#6b625a;
+
+line-height:1.8;
+
+">
+
+
+Acede à plataforma MOZE e explora o resultado final do desenvolvimento
+web.
+
+
+</p>
+
+
+
+
+<a class="btn"
+
+href="https://moze.infinityfreeapp.com/registar.php"
+
+target="_blank">
+
+
+Visitar MOZE
+
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- RODAPÉ -->
+
+
+<footer style="
+
+background:#502F1F;
+
+padding:50px 8%;
+
+text-align:center;
+
+color:white;
+
+">
+
+
+
+<img src="logoclaro.png"
+
+alt="Logótipo Barbosa"
+
+class="footer-logo">
+
+
+
+
+
+<p style="
+
+margin-top:30px;
+
+font-size:13px;
+
+opacity:.6;
+
+">
+
+
+© 2026 Patrícia Barbosa. Todos os direitos reservados.
+
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
